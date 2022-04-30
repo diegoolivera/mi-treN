@@ -4,6 +4,7 @@ import React from 'react'
 import "./home.css"
 //components
 import Viaje from '../viaje/Viaje'
+import DatoBoleto from '../boleto/DatoBoleto'
 
 const Home = () => {
   return (
@@ -12,7 +13,8 @@ const Home = () => {
             <p>Viaje</p>
             <p>Datos</p>
         </div>
-        <Viaje/>
+        {/* <Viaje/> */}
+        <DatoBoleto/>
     </main>
   )
 }

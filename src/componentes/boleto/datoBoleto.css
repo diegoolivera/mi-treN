@@ -1,0 +1,22 @@
+.contentTipoBoleto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.categories{
+    display: flex;
+}
+.categories p{
+    font-family: 'Author', sans-serif;
+    font-size: 20px;
+    color: aliceblue;
+}
+
+.categories select{
+    width: 100px;
+    height: 23px;
+    margin-left: 10px;
+    font-size: 15px;
+    border: 0;
+}
