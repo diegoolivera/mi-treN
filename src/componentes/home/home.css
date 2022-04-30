@@ -1,0 +1,19 @@
+main{
+    background-color: #1C1C1C;
+    height: calc(100vh - 80px);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex p{
+    margin-top: 50px;
+    font-size: 30px;
+    margin-right: 35px;
+    color: rgb(244, 244, 245);
+    cursor: pointer;
+    font-family: 'Author', sans-serif;
+}
