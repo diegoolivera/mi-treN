@@ -26,17 +26,17 @@ const Viaje = () => {
 
             <div className='contentTrenDates'>
                 <p>Proximo</p>
-                <input type="text" id="" />
+                <input type="text" id="" disabled />
             </div>
             
             <div className='contentTrenDates'>
                 <p>Plataforma</p>
-                <input type="text" id="" />
+                <input type="text" id=""  disabled/>
             </div>
 
             <div className='contentTrenDates'>
                 <p>Costo (tipo) $</p>
-                <input type="text" id="" />
+                <input type="text" id=""  disabled/>
             </div>
         </div>
     </article>
