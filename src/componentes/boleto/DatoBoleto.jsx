@@ -3,6 +3,7 @@ import React from 'react'
 import "./datoBoleto.css"
 
 const DatoBoleto = () => {
+  console.log("entro a boleto")
   return (
     <article className='contentTipoBoleto'>
         <div className='categories'>

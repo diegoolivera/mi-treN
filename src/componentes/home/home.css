@@ -17,3 +17,8 @@ main{
     cursor: pointer;
     font-family: 'Author', sans-serif;
 }
+
+.flex p:hover{
+    text-decoration: underline; 
+    
+}

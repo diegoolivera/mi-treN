@@ -11,7 +11,7 @@ const Header = () => {
   return (
     <header className='header'>
         <div className='ContentTitle'>
-            <h1 className='title'>Mi TreN</h1>
+         <h1 className='title'>Mi TreN</h1>
         </div>
         <div  className='contentLogo'>
             <GrTrain className='logo'/>

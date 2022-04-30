@@ -4,6 +4,7 @@ import React from 'react'
 import "./viaje.css"
 
 const Viaje = () => {
+    console.log("entro a viaje")
   return (
     <article>
         <div className='contentViaje'>
