@@ -8,8 +8,6 @@ import LogicaViaje from '../../utils/Viaje'
 const v = new LogicaViaje()
 const Viaje = ({tb}) => {
     
-    const[totalViaje,setTotalViaje] = useState(0)
-    const[datoTren,setDatoTren] = useState({})
     const [selectOrigen,setSelectOrigen] = useState("")
     const [selectDestiny,setSelectDestiny]= useState("")
   
@@ -31,17 +29,17 @@ const Viaje = ({tb}) => {
 
 
     const search = ()=>{
+        let datosTren = v.getDatosViaje()
         let total = v.total(selectOrigen,selectDestiny,tb)
-        setTotalViaje(total)
-        setDatoTren(v.getDatosViaje())
-        fillFields()
+       
+        fillFields(datosTren,total)
         
     }
 
-    const fillFields = ()=>{
-        inputProximo.current.value = datoTren.proximo
-        inputPlataforma.current.value = datoTren.plataforma
-        inputTotal.current.value = totalViaje
+    const fillFields = (tren,total)=>{
+        inputProximo.current.value = tren.proximo
+        inputPlataforma.current.value = tren.plataforma
+        inputTotal.current.value = total
     }
  
   return (
