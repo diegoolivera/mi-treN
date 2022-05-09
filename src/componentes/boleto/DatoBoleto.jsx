@@ -2,18 +2,24 @@ import React from 'react'
 //css
 import "./datoBoleto.css"
 
-const DatoBoleto = () => {
-  console.log("entro a boleto")
+const DatoBoleto = ({sb}) => {
+
+  const tipoBoletoSelect = (e)=>{
+    sb(e.target.value)
+  }
+  
+
   return (
     <article className='contentTipoBoleto'>
         <div className='categories'>
             <p>Tipo Boleto</p>
-            <select  >
-                <option>Jubilado</option>
-                <option>Estudiante</option>
-                <option>Discapacitado</option>
-                <option>Obrero</option>
-                <option>Ninguno</option>
+            <select  onChange={tipoBoletoSelect} >
+                <option> </option>
+                <option value="General"> General</option>
+                <option value="Jubilado">Jubilado</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Discapacitado">Discapacitado</option>
+                <option value="Obrero">Obrero</option>
             </select>
         </div>
     </article>

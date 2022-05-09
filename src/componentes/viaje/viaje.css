@@ -16,10 +16,12 @@ article{
     margin-bottom: 30px;
 }
 
-.contentViajeDates input{
+.contentViajeDates select{
     width: 120px;
     height: 23px;
     margin-left: 15px;
+    text-align: center;
+    font-size: 14px;
 }
 
 .contentViajeDates p{
@@ -70,6 +72,7 @@ article{
     width: 100px;
     height: 23px;
     margin-left: 10px;
+    text-align: center;
 }
 
 .contentTrenDates p{

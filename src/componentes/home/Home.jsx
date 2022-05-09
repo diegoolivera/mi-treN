@@ -8,8 +8,12 @@ import DatoBoleto from '../boleto/DatoBoleto';
 
 const Home = () => {
   const [pagina2,setPagina2] = useState(false)
+  const [tipoBoleto,setTipoBoleto] = useState("General")
   const buttonPage = useRef(null)
   
+  const setBoleto= (tb)=>{
+    setTipoBoleto(tb)
+  }
   const changePag2 = ()=>{
     setPagina2(true)
   }
@@ -23,7 +27,7 @@ const Home = () => {
           <p onClick={changePag2}>Datos</p>
         </div>
         <div>
-          {pagina2? <DatoBoleto/> : <Viaje/> }
+          {pagina2? <DatoBoleto sb={setBoleto} /> : <Viaje tb={tipoBoleto}/> }
         </div>
     </main>
   )

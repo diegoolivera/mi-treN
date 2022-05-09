@@ -1,27 +1,33 @@
-const path = require('path')
+const cities = require("../dataBase/cities.json")
 
 //funciones
 const funciones = require('../utils/funciones')
 
-export class Viaje{
+ class Viaje{
     constructor(){
-        this.cities = path.join(__dirname,"../dataBase/cities.json")
+        this.cities = cities
+    }
+  
+
+   getAllCities(){
+        return this.cities
     }
 
-    async getAllCities(){
-        return await this.readData()
+    getSomeCities(origen){
+        return cities.filter(c => c.name !== origen)
     }
 
-    async getKmCitie(aCitie){
+    getKmCitie(aCitie){
         const cities = this.getAllCities()
         const city = cities.find(c => c.name === aCitie)
         return city.km
     }
 
-    async total(origen,destiny){
+     total(origen,destiny,tb){
         let total = 0
         let totalCombustible = 4.5
-        let costCombustible = 109
+        let costCombustible = 100
+        let descuento = this.descuento(tb)
 
         const kmOrigen = this.getKmCitie(origen)
         const kmDestiny = this.getKmCitie(destiny)
@@ -29,7 +35,8 @@ export class Viaje{
         let kmTotal = kmOrigen + kmDestiny
         total = (kmTotal / totalCombustible) * costCombustible
 
-        return total
+        total = total*descuento 
+        return Math.round(total)
     }
 
    
@@ -44,6 +51,42 @@ export class Viaje{
         return dates
     }
 
+    setTipoBoleto(tb){
+        this.tipoBoleto = tb
+    }
+
+    getTipoBoleto(){
+        return this.tipoBoleto
+    }
+    
+    descuento(tb){
+        let descuento 
+
+        switch (tb) {
+            case "Jubilado":
+                descuento = 0.9
+                return descuento
+                
+            case "Estudiante":
+                descuento = 0.7
+                return descuento
+                
+            case "Discapacitado":
+                descuento = 0.9
+                return descuento
+
+            case "Obrero":
+                descuento = 0.6
+                return descuento
+        
+            default:
+                descuento = 1
+                return descuento
+        }
+    }
+    
+
+    
 
 }
 
@@ -53,7 +96,7 @@ export class Viaje{
 
 
 
-
+export default  Viaje
 
 
 
