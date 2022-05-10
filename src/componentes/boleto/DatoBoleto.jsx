@@ -14,11 +14,11 @@ const DatoBoleto = ({sb}) => {
         <div className='categories'>
             <p>Tipo Boleto</p>
             <select  onChange={tipoBoletoSelect} >
-                <option> </option>
+                <option disabled> Seleccionar </option>
                 <option value="General"> General</option>
                 <option value="Jubilado">Jubilado</option>
                 <option value="Estudiante">Estudiante</option>
-                <option value="Discapacitado">Discapacitado</option>
+                <option value="Discapacitado"> Discapacitado</option>
                 <option value="Obrero">Obrero</option>
             </select>
         </div>

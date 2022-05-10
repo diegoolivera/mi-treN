@@ -85,18 +85,18 @@ const Viaje = ({tb}) => {
             <p className='trenTitle'>Datos tren</p>
 
             <div className='contentTrenDates'>
-                <p>Proximo</p>
-                <input ref={inputProximo} type="text" id="" disabled />
+                <p >Proximo</p>
+                <input ref={inputProximo} type="text" id="" readOnly />
             </div>
             
             <div className='contentTrenDates'>
                 <p>Plataforma</p>
-                <input ref={inputPlataforma} type="text" id="" disabled  />
+                <input ref={inputPlataforma} type="text" id="" readOnly  />
             </div>
 
-            <div className='contentTrenDates'>
-                <p>Costo [{tb}] </p>
-                <input ref={inputTotal} type="text" id="" disabled  />
+            <div className='contentTrenDates'>  
+                <p>Precio [{tb}]</p>
+                <input ref={inputTotal} type="text" id="" readOnly />
             </div>
         </div>
     </article>

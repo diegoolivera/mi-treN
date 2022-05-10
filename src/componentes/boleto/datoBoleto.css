@@ -19,4 +19,14 @@
     margin-left: 10px;
     font-size: 15px;
     border: 0;
+    text-align: center;
+}
+
+/*media querys*/
+@media only screen and (min-width: 600px) {
+    .categories select{
+        width: 130px;
+        height: 30px;
+        border-radius: 5px;
+    }
 }
