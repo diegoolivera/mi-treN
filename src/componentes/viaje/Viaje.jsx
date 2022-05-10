@@ -6,6 +6,7 @@ import "./viaje.css"
 import LogicaViaje from '../../utils/Viaje'
 
 const v = new LogicaViaje()
+const pesoFormat = Intl.NumberFormat('es-AR');
 const Viaje = ({tb}) => {
     
     const [selectOrigen,setSelectOrigen] = useState("")
@@ -37,9 +38,9 @@ const Viaje = ({tb}) => {
     }
 
     const fillFields = (tren,total)=>{
-        inputProximo.current.value = tren.proximo
+        inputProximo.current.value = tren.proximo + " min"
         inputPlataforma.current.value = tren.plataforma
-        inputTotal.current.value = total
+        inputTotal.current.value = "$ " + pesoFormat.format(total)  
     }
  
   return (
@@ -94,8 +95,8 @@ const Viaje = ({tb}) => {
             </div>
 
             <div className='contentTrenDates'>
-                <p>Costo [{tb}] $</p>
-                <input ref={inputTotal} type="number" id="" disabled  />
+                <p>Costo [{tb}] </p>
+                <input ref={inputTotal} type="text" id="" disabled  />
             </div>
         </div>
     </article>

@@ -41,8 +41,8 @@ const funciones = require('../utils/funciones')
 
    
     getDatosViaje(){
-        let minExtra = funciones.getRandomInt(20,50)
-        let proximo = new Date().getHours() + ":" + (new Date().getMinutes()+minExtra) 
+        let minExtra = funciones.getRandomInt(10,50)
+        let proximo = minExtra 
         let plataforma = funciones.getRandomInt(1,30)
         const dates={
             proximo:proximo,
