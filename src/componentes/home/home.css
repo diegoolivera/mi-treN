@@ -6,19 +6,20 @@ main{
 .flex{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 350px;
+    margin: 0 auto;
 }
 
 .flex p{
     margin-top: 30px;
     font-size: 30px;
-    margin-right: 35px;
     color: rgb(244, 244, 245);
     cursor: pointer;
     font-family: 'Author', sans-serif;
 }
 
-.flex p:hover{
+
+.activar{
     text-decoration: underline; 
-    
 }
