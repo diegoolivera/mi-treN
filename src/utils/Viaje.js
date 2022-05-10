@@ -26,7 +26,7 @@ const funciones = require('../utils/funciones')
      total(origen,destiny,tb){
         let total = 0
         let totalCombustible = 4.5
-        let costCombustible = 100
+        let costCombustible = 20
         let descuento = this.descuento(tb)
 
         const kmOrigen = this.getKmCitie(origen)
