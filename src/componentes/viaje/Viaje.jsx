@@ -4,6 +4,8 @@ import React,{useRef,useState} from 'react'
 import "./viaje.css"
 //clases
 import LogicaViaje from '../../utils/Viaje'
+//sweetalert
+import swal from "sweetalert2"
 
 const v = new LogicaViaje()
 const pesoFormat = Intl.NumberFormat('es-AR');
@@ -30,11 +32,20 @@ const Viaje = ({tb}) => {
 
 
     const search = ()=>{
+        if (selectOrigen=== "" || selectDestiny==="") {
+            swal.fire({
+                icon: 'error',
+                title: 'Complete los Campos',
+                showConfirmButton: false,
+                timer: 1200,
+            })
+
+           return
+        }
+        
         let datosTren = v.getDatosViaje()
         let total = v.total(selectOrigen,selectDestiny,tb)
-       
-        fillFields(datosTren,total)
-        
+        fillFields(datosTren,total)   
     }
 
     const fillFields = (tren,total)=>{
